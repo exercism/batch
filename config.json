@@ -8,7 +8,7 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "TODO: add blurb",
+  "blurb": "Sequential commands automate tasks in Windows OS via .bat or .cmd files.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
@@ -22,7 +22,18 @@
   },
   "exercises": {
     "concept": [],
-    "practice": []
+    "practice": [
+      {
+        "uuid": "d4919f7e-5e88-48a1-a357-e79cd6f98346",
+        "slug": "hello-world",
+        "name": "Hello World",
+        "practices": [
+          "basics"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      }
+    ]
   },
   "concepts": [],
   "key_features": [],
