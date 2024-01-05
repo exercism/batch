@@ -37,5 +37,8 @@
   },
   "concepts": [],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "platform/windows",
+    "used_for/automation"
+  ]
 }
