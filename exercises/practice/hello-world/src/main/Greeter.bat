@@ -1,1 +1,1 @@
-@Echo Goodbye, Me!
+@Echo Goodbye, Mars!
