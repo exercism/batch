@@ -39,6 +39,10 @@
   "key_features": [],
   "tags": [
     "platform/windows",
-    "used_for/scripts"
+    "used_for/scripts",
+    "paradigm/imperative",
+    "typing/dynamic",
+    "typing/weak",
+    "execution_mode/interpreted"
   ]
 }
