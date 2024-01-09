@@ -2,13 +2,13 @@
   "authors": ["GroophyLifefor"],
   "files": {
     "solution": [
-      "src/main/Greeter.bat"
+      "Greeter.bat"
     ],
     "test": [
-      "src/test/GreeterTest.bat"
+      "GreeterTest.bat"
     ],
     "example": [
-      ".meta/src/reference/Greeter.bat"
+      ".meta/Example.bat"
     ]
   },
   "blurb": "Exercism's classic introductory exercise. Just say \"Hello, World!\".",
