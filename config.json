@@ -8,7 +8,7 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "Sequential commands automate tasks in Windows OS via .bat or .cmd files.",
+  "blurb": "Batch was a scripting language which is one of the best languages with backward support, it is still commonly used today because of its unorthodox dynamic structure.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
