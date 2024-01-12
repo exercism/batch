@@ -2,10 +2,10 @@
   "authors": ["GroophyLifefor"],
   "files": {
     "solution": [
-      "Greeter.bat"
+      "HelloWorld.bat"
     ],
     "test": [
-      "GreeterTest.bat"
+      "HelloWorldTest.bat"
     ],
     "example": [
       ".meta/Example.bat"
