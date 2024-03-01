@@ -2,10 +2,10 @@
   "authors": ["GroophyLifefor"],
   "files": {
     "solution": [
-      "raindrops.bat"
+      "Raindrops.bat"
     ],
     "test": [
-      "raindropsTest.bat"
+      "RaindropsTest.bat"
     ],
     "example": [
       ".meta/Example.bat"
