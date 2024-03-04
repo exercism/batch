@@ -1,46 +1,24 @@
 @echo off
 SETLOCAL EnableDelayedExpansion
 
-call :macro
+set "nucleotide=%~1"
+set "nucleotide[A]=0"
+set "nucleotide[C]=0"
+set "nucleotide[G]=0"
+set "nucleotide[T]=0"
 
-REM TODO: Need to cleanup the code
-
-set "string=%~1"
-
-REM set "string=G"
-REM set "string=GGGGGGG"
-REM set "string=AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
-
-echo -%string%-
-
-%getlen% %string%
-set /a "len[0]=length"
-
-for %%i in (A C G T) do (
-	set "string=!string:%%i=!"
-	%getlen% !string!
-	set /a "c+=1", "d=c - 1"
-	set /a "len[!c!]=length"
-	set /a "%%i_difference=len[!d!] - len[!c!]"
+if "!nucleotide!"=="" goto :display_result
+for /f "delims=ACGT" %%A in ("%nucleotide%") do (
+	echo Invalid nucleotide in strand
+	exit /b
 )
 
-if !T_difference! equ 0 (
-	set /a "T_difference=len[4]"
-	set "len[4]=0"
-)
+set "index=0"
+:strand_walker
+if "!nucleotide:~%index%,1!"=="" goto :display_result
+set /a "nucleotide[!nucleotide:~%index%,1!]+=1"
+set /a index+=1
+goto :strand_walker
 
-echo !A_difference!,!C_difference!,!G_difference!,!T_difference!
-
-goto end
-
-:macro
-(set \n=^^^
-%= This creates an escaped Line Feed - DO NOT ALTER =%
-)
-
-set getlen=for %%# in (1 2) do if %%#==2 ( for %%1 in (^^!args^^!) do (%\n%
-	set "str=X%%~1" ^& set "length=0" ^& for /l %%b in (10,-1,0) do set /a "length|=1<<%%b" ^& for %%c in (^^!length^^!) do if "^!str:~%%c,1^!" equ "" set /a "length&=~1<<%%b"%\n%
-)) else set args=
-goto :eof
-
-:end
+:display_result
+echo !nucleotide[A]!,!nucleotide[C]!,!nucleotide[G]!,!nucleotide[T]!

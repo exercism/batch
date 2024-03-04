@@ -15,27 +15,27 @@ REM ---------------------------------------------------
     REM --------------------
     set "expected=0,0,0,0"
     set "if_success=Test passed"
-    set "if_failed=Test failed: empty strand. (expected: %expected%, actually: %stdout%^)"
+    set "if_failed=Test failed: empty strand."
     CALL :Assert ""
 
     set "expected=0,0,1,0"
     set "if_success=Test passed"
-    set "if_failed=Test failed: can count one nucleotide in single-character input. (expected: %expected%, actually: %stdout%^)"
+    set "if_failed=Test failed: can count one nucleotide in single-character input."
     CALL :Assert "G"
 
     set "expected=0,0,7,0"
     set "if_success=Test passed"
-    set "if_failed=Test failed: strand with repeated nucleotide. (expected: %expected%, actually: %stdout%^)"
+    set "if_failed=Test failed: strand with repeated nucleotide."
     CALL :Assert "GGGGGGG"
 
     set "expected=20,12,17,21"
     set "if_success=Test passed"
-    set "if_failed=Test failed: strand with multiple nucleotides. (expected: %expected%, actually: %stdout%^)"
+    set "if_failed=Test failed: strand with multiple nucleotides."
     CALL :Assert "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
 
     set "expected=Invalid nucleotide in strand"
     set "if_success=Test passed"
-    set "if_failed=Test failed: strand with invalid nucleotides - Print just 'Invalid nucleotide in strand'. (expected: %expected%, actually: %stdout%^)"
+    set "if_failed=Test failed: strand with invalid nucleotides - Print just 'Invalid nucleotide in strand'."
     CALL :Assert "AGXXACT"
 
     REM --------------------
