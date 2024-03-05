@@ -1,0 +1,17 @@
+{
+  "authors": ["GroophyLifefor"],
+  "files": {
+    "solution": [
+      "Acronym.bat"
+    ],
+    "test": [
+      "AcronymTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Convert a long phrase to its acronym.",
+  "source": "Julien Vanier",
+  "source_url": "https://github.com/monkbroc/"
+}
