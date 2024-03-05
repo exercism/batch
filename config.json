@@ -43,6 +43,19 @@
         ],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "uuid": "09af4822-c1da-4581-a88e-b44bbe275607",
+        "slug": "nucleotide-count",
+        "name": "Nucleotide Count",
+        "practices": [
+          "basics",
+          "loops",
+          "arrays",
+          "conditionals"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
