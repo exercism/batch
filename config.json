@@ -56,6 +56,18 @@
         ],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "uuid": "c58b5f94-0d2c-4d1f-9191-2eb4eefac1d9",
+        "slug": "acronym",
+        "name": "Acronym",
+        "practices": [
+          "arrays",
+          "loops",
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
