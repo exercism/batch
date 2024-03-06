@@ -60,17 +60,6 @@ REM ---------------------------------------------------
     set "if_failed=Test failed: Seven-digit number that is not an Armstrong number."
     CALL :Assert 9926314
     
-    REM -- Batch Scripting does not support 64-bit integers --
-        REM set "expected=true"
-        REM set "if_success=Test passed"
-        REM set "if_failed=Test failed: Armstrong number containing seven zeroes."
-        REM CALL :Assert 186709961001538790100634132976990
-        
-        REM set "expected=true"
-        REM set "if_success=Test passed"
-        REM set "if_failed=Test failed: The largest and last Armstrong number."
-        REM CALL :Assert 115132219018763992565095597973971522401
-
     REM --------------------
     REM Test Case End /\/\/\
     REM --------------------
