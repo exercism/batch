@@ -68,6 +68,17 @@
         ],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "uuid": "8facdbc2-73b4-4a7d-ab34-067f1dd2ae40",
+        "slug": "armstrong-numbers",
+        "name": "Armstrong Numbers",
+        "practices": [
+          "numbers",
+          "booleans"
+        ],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
