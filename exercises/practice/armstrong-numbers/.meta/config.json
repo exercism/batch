@@ -1,0 +1,17 @@
+{
+  "authors": ["GroophyLifefor"],
+  "files": {
+    "solution": [
+      "ArmstrongNumbers.bat"
+    ],
+    "test": [
+      "ArmstrongNumbersTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Determine if a number is an Armstrong number.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number/"
+}
