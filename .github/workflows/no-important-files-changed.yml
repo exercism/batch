@@ -11,6 +11,9 @@ on:
       - "!exercises/*/*/.articles/**"
       - "!exercises/*/*/.docs/**"
       - "!exercises/*/*/.meta/**"
+  pull_request:
+    types: [opened]
+    branches: [main]
 
 permissions:
   pull-requests: write
