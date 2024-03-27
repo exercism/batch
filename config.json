@@ -80,6 +80,14 @@
           "numbers"
         ],
         "difficulty": 1
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "cb581e2c-66ab-4221-9884-44bacb7c4ebe",
+        "practices": ["comparisons"],
+        "prerequisites": ["basics", "numbers", "comparisons", "conditionals"],
+        "difficulty": 1
       }
     ]
   },
