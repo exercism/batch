@@ -88,6 +88,14 @@
         "practices": ["comparisons"],
         "prerequisites": ["basics", "numbers", "comparisons", "conditionals"],
         "difficulty": 1
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "fcde9a41-e1e7-4566-9c36-01158cb581c4",
+        "practices": ["function-arguments"],
+        "prerequisites": ["basics", "strings"],
+        "difficulty": 1
       }
     ]
   },

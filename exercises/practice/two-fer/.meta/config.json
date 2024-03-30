@@ -1,0 +1,16 @@
+{
+  "authors": ["GroophyLifefor"],
+  "files": {
+    "solution": [
+      "TwoFer.bat"
+    ],
+    "test": [
+      "TwoFerTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Create a sentence of the form \"One for X, one for me.\".",
+  "source": "https://github.com/exercism/problem-specifications/issues/757"
+}
