@@ -72,15 +72,14 @@
           "raising-and-handling-errors",
           "sequences"
         ],
-        "prerequisites": [],
-        "difficulty": 3
-      },
-      {
-        "slug": "clock",
-        "name": "Clock",
-        "uuid": "2ea341bf-b45d-49a8-95b8-3a0c3fb96fab",
-        "prerequisites": [],
-        "difficulty": 4
+        "prerequisites": [
+          "basics",
+          "lists",
+          "loops",
+          "conditionals",
+          "numbers"
+        ],
+        "difficulty": 1
       },
       {
         "slug": "darts",
@@ -97,6 +96,13 @@
         "practices": ["function-arguments"],
         "prerequisites": ["basics", "strings"],
         "difficulty": 1
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "2ea341bf-b45d-49a8-95b8-3a0c3fb96fab",
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
