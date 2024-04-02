@@ -85,14 +85,6 @@
           "numbers",
           "conditionals"
         ]
-        "prerequisites": [
-          "basics",
-          "lists",
-          "loops",
-          "conditionals",
-          "numbers"
-        ],
-        "difficulty": 1
       },
       {
         "slug": "darts",
