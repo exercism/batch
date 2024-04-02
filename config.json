@@ -80,11 +80,7 @@
         "name": "Clock",
         "uuid": "2ea341bf-b45d-49a8-95b8-3a0c3fb96fab",
         "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "numbers",
-          "conditionals"
-        ]
+        "difficulty": 4
       },
       {
         "slug": "darts",
