@@ -27,9 +27,7 @@
         "uuid": "d4919f7e-5e88-48a1-a357-e79cd6f98346",
         "slug": "hello-world",
         "name": "Hello World",
-        "practices": [
-          "basics"
-        ],
+        "practices": ["basics"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -37,10 +35,7 @@
         "uuid": "9287b1e2-253b-4a05-bce0-1361b186459e",
         "slug": "raindrops",
         "name": "raindrops",
-        "practices": [
-          "basics",
-          "conditionals"
-        ],
+        "practices": ["basics", "conditionals"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -48,12 +43,7 @@
         "uuid": "09af4822-c1da-4581-a88e-b44bbe275607",
         "slug": "nucleotide-count",
         "name": "Nucleotide Count",
-        "practices": [
-          "basics",
-          "loops",
-          "arrays",
-          "conditionals"
-        ],
+        "practices": ["basics", "loops", "arrays", "conditionals"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -61,11 +51,7 @@
         "uuid": "c58b5f94-0d2c-4d1f-9191-2eb4eefac1d9",
         "slug": "acronym",
         "name": "Acronym",
-        "practices": [
-          "arrays",
-          "loops",
-          "strings"
-        ],
+        "practices": ["arrays", "loops", "strings"],
         "prerequisites": [],
         "difficulty": 1
       },
@@ -73,9 +59,18 @@
         "uuid": "8facdbc2-73b4-4a7d-ab34-067f1dd2ae40",
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
+        "practices": ["numbers", "booleans"],
+        "prerequisites": ["basics", "numbers"],
+        "difficulty": 3
+      },
+      {
+        "uuid": "57944303-25ed-422e-9054-1e77cc2910bf",
+        "slug": "hamming",
+        "name": "Hamming",
         "practices": [
-          "numbers",
-          "booleans"
+          "generator-expressions",
+          "raising-and-handling-errors",
+          "sequences"
         ],
         "prerequisites": [],
         "difficulty": 3
@@ -90,6 +85,30 @@
           "numbers",
           "conditionals"
         ]
+        "prerequisites": [
+          "basics",
+          "lists",
+          "loops",
+          "conditionals",
+          "numbers"
+        ],
+        "difficulty": 1
+      },
+      {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "cb581e2c-66ab-4221-9884-44bacb7c4ebe",
+        "practices": ["comparisons"],
+        "prerequisites": ["basics", "numbers", "comparisons", "conditionals"],
+        "difficulty": 1
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "fcde9a41-e1e7-4566-9c36-01158cb581c4",
+        "practices": ["function-arguments"],
+        "prerequisites": ["basics", "strings"],
+        "difficulty": 1
       }
     ]
   },
