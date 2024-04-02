@@ -1,0 +1,16 @@
+{
+  "authors": ["GroophyLifefor"],
+  "files": {
+    "solution": [
+      "ReverseString.bat"
+    ],
+    "test": [
+      "ReverseStringTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Reverse a given string.",
+  "source": "Introductory challenge to reverse an input string"
+}
