@@ -1,0 +1,16 @@
+{
+  "authors": ["GroophyLifefor"],
+  "files": {
+    "solution": [
+      "Clock.bat"
+    ],
+    "test": [
+      "ClockTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Implement a clock that handles times without dates.",
+  "source": "Pairing session with Erin Drummond."
+}

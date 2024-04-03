@@ -108,6 +108,14 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
+      },
+      {
+        "slug": "clock",
+        "name": "Clock",
+        "uuid": "2ea341bf-b45d-49a8-95b8-3a0c3fb96fab",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
