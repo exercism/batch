@@ -96,6 +96,18 @@
         "practices": ["function-arguments"],
         "prerequisites": ["basics", "strings"],
         "difficulty": 1
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "ba8c915a-85c0-4798-b21f-4adf4268b606",
+        "practices": [
+          "loops",
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": []
       }
     ]
   },
