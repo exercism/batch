@@ -116,6 +116,21 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
+      },
+      {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "4d8a68eb-eee9-4c51-97b8-57f3b69f5970",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "games",
+          "loops",
+          "pattern_matching",
+          "strings",
+          "transforming"
+        ]
       }
     ]
   },
