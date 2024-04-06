@@ -1,75 +1,72 @@
 @echo off
 REM ---------------------------------------------------
-REM Scrabble Score Unit Testing
+REM Series Unit Testing
 REM ---------------------------------------------------
 
 :Main
     REM Initalize result variable
-    set "slug=ScrabbleScore"
+    set "slug=Series"
 
     CALL :Initialize
 
     REM --------------------
     REM Test Case Start \/\/
-    REM Resource: https://github.com/exercism/problem-specifications/blob/main/exercises/scrabble-score/canonical-data.json
+    REM Resource: https://github.com/exercism/problem-specifications/blob/main/exercises/series/canonical-data.json
     REM --------------------
     set "expected=1"
     set "if_success=Test passed"
-    set "if_failed=Test failed: lowercase letter."
-    CALL :Assert "a"
+    set "if_failed=Test failed: slices of one from one."
+    CALL :Assert "1" "1"
 
-    set "expected=1"
+    set "expected=1 2"
     set "if_success=Test passed"
-    set "if_failed=Test failed: uppercase letter."
-    CALL :Assert "A"
+    set "if_failed=Test failed: slices of one from two."
+    CALL :Assert "12" "1"
 
-    set "expected=4"
+    set "expected=35"
     set "if_success=Test passed"
-    set "if_failed=Test failed: valuable letter."
-    CALL :Assert "f"
+    set "if_failed=Test failed: slices of two."
+    CALL :Assert "35" "2"
 
-    set "expected=2"
+    set "expected=91 14 42"
     set "if_success=Test passed"
-    set "if_failed=Test failed: short word."
-    CALL :Assert "at"
+    set "if_failed=Test failed: slices of two overlap."
+    CALL :Assert "9142" "2"
 
-    set "expected=12"
+    set "expected=777 777 777 777"
     set "if_success=Test passed"
-    set "if_failed=Test failed: short, valuable word."
-    CALL :Assert "zoo"
+    set "if_failed=Test failed: slices can include duplicates."
+    CALL :Assert "777777" "3"
 
-    set "expected=6"
+    set "expected=91849 18493 84939 49390 93904 39042 90424 04243"
     set "if_success=Test passed"
-    set "if_failed=Test failed: medium word."
-    CALL :Assert "street"
+    set "if_failed=Test failed: slices of a long series."
+    CALL :Assert "918493904243" "5"
 
-    set "expected=22"
+    set "expected=slice length cannot be greater than series length"
     set "if_success=Test passed"
-    set "if_failed=Test failed: medium, valuable word."
-    CALL :Assert "quirky"
+    set "if_failed=Test failed: slice length is too large."
+    CALL :Assert "12345" "6"
 
-    set "expected=41"
+    set "expected=slice length cannot be greater than series length"
     set "if_success=Test passed"
-    set "if_failed=Test failed: long, mixed-case word."
-    CALL :Assert "OxyphenButazone"
+    set "if_failed=Test failed: slice length is way too large."
+    CALL :Assert "12345" "42"
 
-    set "expected=8"
+    set "expected=slice length cannot be zero"
     set "if_success=Test passed"
-    set "if_failed=Test failed: english-like word."
-    CALL :Assert "pinata"
+    set "if_failed=Test failed: slice length cannot be zero."
+    CALL :Assert "12345" "0"
 
-    set "expected=0"
+    set "expected=slice length cannot be negative"
     set "if_success=Test passed"
-    set "if_failed=Test failed: empty input."
-    CALL :Assert ""
+    set "if_failed=Test failed: slice length cannot be negative."
+    CALL :Assert "12345" "-1"
 
-    set "expected=87"
+    set "expected=series cannot be empty"
     set "if_success=Test passed"
-    set "if_failed=Test failed: entire alphabet available."
-    CALL :Assert "abcdefghijklmnopqrstuvwxyz"
-
-    REM TODO: as Future - ADD OTHER TEST CASES LIKE ADD VALUE TEST CASE
-    REM https://github.com/exercism/problem-specifications/blob/8b6a412a949d9080b08869156067a16521c4d1ba/exercises/clock/canonical-data.json#L216
+    set "if_failed=Test failed: empty series is invalid."
+    CALL :Assert "" "1"
 
     REM --------------------
     REM Test Case End /\/\/\
