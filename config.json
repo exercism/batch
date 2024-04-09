@@ -131,6 +131,21 @@
           "strings",
           "transforming"
         ]
+      },
+      {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "fabbdf32-5709-47f9-b676-f930a7db3a75",
+        "practices": ["sequences"],
+        "prerequisites": [
+          "basics",
+          "conditionals",
+          "lists",
+          "loops",
+          "numbers",
+          "strings"
+        ],
+        "difficulty": 2
       }
     ]
   },
