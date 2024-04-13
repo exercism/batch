@@ -162,6 +162,22 @@
         "practices": ["numbers"],
         "prerequisites": ["basics", "numbers", "conditionals", "loops"],
         "difficulty": 2
+      },
+      {
+        "slug": "sieve",
+        "name": "Sieve",
+        "uuid": "6dc21f0d-dfd6-4470-87ad-d86152829845",
+        "practices": ["sets"],
+        "prerequisites": [
+          "basics",
+          "conditionals",
+          "lists",
+          "list-methods",
+          "loops",
+          "numbers",
+          "sets"
+        ],
+        "difficulty": 6
       }
     ]
   },
