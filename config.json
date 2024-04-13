@@ -154,6 +154,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "de9d1220-6e35-42cd-8be0-9994dbb5edab",
+        "practices": ["numbers"],
+        "prerequisites": ["basics", "numbers", "conditionals", "loops"],
+        "difficulty": 2
       }
     ]
   },

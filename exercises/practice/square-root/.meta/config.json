@@ -1,0 +1,16 @@
+{
+  "authors": ["GroophyLifefor"],
+  "files": {
+    "solution": [
+      "SquareRoot.bat"
+    ],
+    "test": [
+      "SquareRootTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Given a natural radicand, return its square root.",
+  "source": "wolf99"
+}
