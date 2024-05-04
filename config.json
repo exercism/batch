@@ -178,6 +178,14 @@
           "sets"
         ],
         "difficulty": 6
+      },
+      {
+        "slug": "difference-of-squares",
+        "name": "Difference of Squares",
+        "uuid": "7051e75f-78a9-48b4-ac0a-7f6eb9262560",
+        "practices": [],
+        "prerequisites": ["basics", "numbers", "loops"],
+        "difficulty": 1
       }
     ]
   },
