@@ -101,10 +101,7 @@
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "ba8c915a-85c0-4798-b21f-4adf4268b606",
-        "practices": [
-          "loops",
-          "strings"
-        ],
+        "practices": ["loops", "strings"],
         "prerequisites": [],
         "difficulty": 1,
         "topics": []
@@ -186,6 +183,24 @@
         "practices": [],
         "prerequisites": ["basics", "numbers", "loops"],
         "difficulty": 1
+      },
+      {
+        "slug": "nth-prime",
+        "name": "Nth Prime",
+        "uuid": "9fd3acaf-d5d7-4f95-addc-db31b4779844",
+        "practices": [],
+        "prerequisites": [
+          "basics",
+          "bools",
+          "conditionals",
+          "comparisons",
+          "lists",
+          "list-methods",
+          "loops",
+          "numbers",
+          "strings"
+        ],
+        "difficulty": 2
       }
     ]
   },
