@@ -1,0 +1,16 @@
+{
+  "authors": ["dbenham", "GroophyLifefor"],
+  "files": {
+    "solution": [
+      "NthPrime.bat"
+    ],
+    "test": [
+      "NthPrimeTest.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ]
+  },
+  "blurb": "Given a number n, determine what the nth prime is.",
+  "source": "A variation on Problem 7 at Project Euler"
+}
