@@ -201,6 +201,14 @@
           "strings"
         ],
         "difficulty": 2
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "705ef283-a566-4782-8907-059da2719032",
+        "practices": [],
+        "prerequisites": ["arrays", "loops", "strings"],
+        "difficulty": 2
       }
     ]
   },
