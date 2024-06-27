@@ -1,42 +1,51 @@
 @echo off
+setlocal enabledelayedexpansion
 REM ---------------------------------------------------
-REM Nucleotide Count Unit Testing
+REM Proverb Unit Testing
+REM 
+REM sUnit Testing Framework version: 0.3
 REM ---------------------------------------------------
+
+set "successCount=0"
+set "failCount=0"
 
 :Main
     REM Initalize result variable
-    set "slug=NucleotideCount"
-
-    CALL :Initialize
+    set "slug=Proverb"
 
     REM --------------------
     REM Test Case Start \/\/
-    REM Resource: https://github.com/exercism/problem-specifications/blob/ce02684e726a1b78a1c1e591188e4e268fd27b15/exercises/nucleotide-count/canonical-data.json
+    REM Resource: https://github.com/exercism/problem-specifications/blob/main/exercises/proverb/canonical-data.json
     REM --------------------
-    set "expected=0,0,0,0"
+    set "expected="
     set "if_success=Test passed"
-    set "if_failed=Test failed: empty strand."
+    set "if_failed=Test failed: zero pieces"
     CALL :Assert ""
 
-    set "expected=0,0,1,0"
+    set "expected=And all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: can count one nucleotide in single-character input."
-    CALL :Assert "G"
+    set "if_failed=Test failed: one pieces"
+    CALL :Assert "nail"
 
-    set "expected=0,0,7,0"
+    set "expected=For want of a nail the shoe was lost.\nAnd all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: strand with repeated nucleotide."
-    CALL :Assert "GGGGGGG"
+    set "if_failed=Test failed: one pieces"
+    CALL :Assert "nail shoe"
 
-    set "expected=20,12,17,21"
+    set "expected=For want of a nail the shoe was lost.\nFor want of a shoe the horse was lost.\nAnd all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: strand with multiple nucleotides."
-    CALL :Assert "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+    set "if_failed=Test failed: one pieces"
+    CALL :Assert "nail shoe horse"
 
-    set "expected=Invalid nucleotide in strand"
+    set "expected=For want of a nail the shoe was lost.\nFor want of a shoe the horse was lost.\nFor want of a horse the rider was lost.\nFor want of a rider the message was lost.\nFor want of a message the battle was lost.\nFor want of a battle the kingdom was lost.\nAnd all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: strand with invalid nucleotides - Print just 'Invalid nucleotide in strand'."
-    CALL :Assert "AGXXACT"
+    set "if_failed=Test failed: one pieces"
+    CALL :Assert "nail shoe horse rider message battle kingdom"
+
+    set "expected=For want of a pin the gun was lost.\nFor want of a gun the soldier was lost.\nFor want of a soldier the battle was lost.\nAnd all for the want of a pin."
+    set "if_success=Test passed"
+    set "if_failed=Test failed: one pieces"
+    CALL :Assert "pin gun soldier battle"
 
     REM --------------------
     REM Test Case End /\/\/\
@@ -54,8 +63,15 @@ GOTO :End REM Prevents the code below from being executed
 set "stdout="
 
 REM Run the program and capture the output then delete the file
-CALL %slug%.bat %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
-set /p stdout=<stdout.bin
+CALL %slug%.bat %1 %2 %3 %4 %5 %6 %7 %8 %9 > stdout.bin 2>&1
+for /f "delims=" %%A in (stdout.bin) do (
+    set "line=%%A"
+    if defined stdout (
+        set "stdout=!stdout!\n!line!"
+    ) else (
+        set "stdout=!line!"
+    )
+)
 del stdout.bin
 
 REM Check if the result is correct
@@ -85,12 +101,6 @@ if "%stdout%" == "%expected%" (
     exit /b 1
 )
 GOTO :EOF REM Go back to the line after the call to :Assert
-
-:Initialize
-REM It's for initialize, not about checking empty file
-set "successCount=0"
-set "failCount=0"
-GOTO :EOF REM Go back to the line after the call to :CheckEmptyFile
 
 :ResolveStatus
 set "status="
