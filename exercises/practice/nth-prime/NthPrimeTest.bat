@@ -1,6 +1,6 @@
 @echo off
 REM ---------------------------------------------------
-REM Difference Of Squares Unit Testing
+REM Nth Prime Unit Testing
 REM 
 REM sUnit Testing Framework version: 0.2
 REM ---------------------------------------------------
