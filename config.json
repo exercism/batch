@@ -209,6 +209,20 @@
         "practices": [],
         "prerequisites": ["arrays", "loops", "strings"],
         "difficulty": 2
+      },
+      {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "c6654779-1e5d-47ba-940a-4d96261513cd",
+        "practices": [],
+        "prerequisites": [
+          "basics",
+          "dicts",
+          "lists",
+          "loops",
+          "strings"
+        ],
+        "difficulty": 4
       }
     ]
   },
