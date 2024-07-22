@@ -223,6 +223,14 @@
           "strings"
         ],
         "difficulty": 4
+      },
+      {
+        "slug": "resistor-code",
+        "name": "Resistor Code",
+        "uuid": "4c5320a5-1d45-4895-bb8d-4fe735f5d6a2",
+        "practices": [],
+        "prerequisites": ["basics", "conditionals", "loops", "strings"],
+        "difficulty": 1
       }
     ]
   },
