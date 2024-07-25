@@ -1,0 +1,145 @@
+Unhandled exception: page fault on read access to 0x0000002a in wow64 32-bit code (0x7bd74356).
+Register dump:
+ CS:0023 SS:002b DS:002b ES:002b FS:006b GS:0063
+ EIP:7bd74356 ESP:00767cec EBP:00767cec EFLAGS:00010202(  R- --  I   - - - )
+ EAX:0000002a EBX:00767d1c ECX:00000119 EDX:0000002a
+ ESI:00767d68 EDI:7bd5d610
+Stack dump:
+0x00767cec:  00767cfc 7bd5d62c 0000002a 00767d1c
+0x00767cfc:  00767d38 7b6a6874 00767d1c 0000002a
+0x00767d0c:  00767d68 0000003d 00767d38 004034e0
+0x00767d1c:  00000004 0000002a 00767d68 00002000
+0x00767d2c:  0076bdb8 00767d68 0000003d 0076bd74
+0x00767d3c:  0040630e 0000002a 00767d68 0041e110
+Backtrace:
+=>0 0x7bd74356 wcslen+0x6(str=*** invalid address 0000002A ***) [/usr/src/wine-9.0~repack-4build3/dlls/ntdll/wcstring.c:218] in ntdll (0x00767cec)
+  1 0x7bd5d62c RtlInitUnicodeString+0x1c(target=00767D1C, source=*** invalid address 0000002A ***) [/usr/src/wine-9.0~repack-4build3/dlls/ntdll/rtlstr.c:179] in ntdll (0x00767cfc)
+  2 0x7b6a6874 SetEnvironmentVariableW+0x2f(name=*** invalid address 0000002A ***, value=L"281") [/usr/src/wine-9.0~repack-4build3/dlls/kernelbase/process.c:1730] in kernelbase (0x00767d38)
+  3 0x0040630e WCMD_reduce+0x4ae(opstack=<internal error>, varstack=0076BDB8) [/usr/src/wine-9.0~repack-4build3/programs/cmd/builtins.c:3891] in cmd (0x0076bd74)
+  4 0x00406ac3 WCMD_handleExpression+0x393(expr=0076BE08, ret=0076BE14, depth=0x1) [/usr/src/wine-9.0~repack-4build3/programs/cmd/builtins.c:4056] in cmd (0x0076bdcc)
+  5 0x00406b63 WCMD_handleExpression+0x433(expr=0076BE48, ret=0076BE44, depth=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/builtins.c:4078] in cmd (0x0076be24)
+  6 0x0040f70d WCMD_setshow_env+0x3fd(s=L"/a "dart_location=( x=(162)/(11*1024)+40, x=((162)/x+x)/2, x=((162)/x+x)/2, x=((162)/x+x)/2, x=((162)/x+x)/2, x=((162)/x+x)/2 )") [/usr/src/wine-9.0~repack-4build3/programs/cmd/builtins.c:4210] in cmd (0x0076fe58)
+  7 0x0041ad06 WCMD_execute+0xdb6(command=L"set /a "dart_location=!sqrt(n):n=162!", redirects=L"", cmdList=00770128, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1582] in cmd (0x007700f0)
+  8 0x00419213 WCMD_process_commands+0x63(thisCmd=<is not available>, oneBracket=0, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2390] in cmd (0x00770120)
+  9 0x0040129b WCMD_batch+0x17b(file=<is not available>, command=<is not available>, called=<is not available>, startLabel=<is not available>, pgmHandle=<is not available>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:96] in cmd (0x00770160)
+  10 0x00419e5f WCMD_run_program+0xb7f(command=L".meta/Example.bat "-9" "9"         ", called=0x1) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1210] in cmd (0x00778b04)
+  11 0x00402b58 WCMD_call+0x138(command=<couldn't compute location>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:656] in cmd (0x00778e10)
+  12 0x0041aea8 WCMD_execute+0xf58(command=L"CALL .meta/Example.bat "-9" "9"         ", redirects=L"> stdout.bin 2>&1", cmdList=007790EC, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1512] in cmd (0x007790b4)
+  13 0x00419213 WCMD_process_commands+0x63(thisCmd=<is not available>, oneBracket=0, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2390] in cmd (0x007790e4)
+  14 0x0040129b WCMD_batch+0x17b(file=<is not available>, command=<is not available>, called=<is not available>, startLabel=<is not available>, pgmHandle=<is not available>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:96] in cmd (0x00779124)
+  15 0x00402aff WCMD_call+0xdf(command=<couldn't compute location>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:679] in cmd (0x00779430)
+  16 0x0041aea8 WCMD_execute+0xf58(command=L"CALL :Assert "-9" "9"", redirects=L"", cmdList=00779708, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1512] in cmd (0x007796d0)
+  17 0x00419213 WCMD_process_commands+0x63(thisCmd=<is not available>, oneBracket=0, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2390] in cmd (0x00779700)
+  18 0x0040129b WCMD_batch+0x17b(file=<is not available>, command=<is not available>, called=<is not available>, startLabel=<is not available>, pgmHandle=<is not available>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:96] in cmd (0x00779740)
+  19 0x00419e5f WCMD_run_program+0xb7f(command=L"DartsTest.bat test-runner", called=0x1) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1210] in cmd (0x007820e4)
+  20 0x00402b58 WCMD_call+0x138(command=<couldn't compute location>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:656] in cmd (0x007823f0)
+  21 0x0041aea8 WCMD_execute+0xf58(command=L"call DartsTest.bat test-runner", redirects=L"", cmdList=007826C8, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1512] in cmd (0x00782690)
+  22 0x00419213 WCMD_process_commands+0x63(thisCmd=<is not available>, oneBracket=0, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2390] in cmd (0x007826c0)
+  23 0x0040129b WCMD_batch+0x17b(file=<is not available>, command=<is not available>, called=<is not available>, startLabel=<is not available>, pgmHandle=<is not available>) [/usr/src/wine-9.0~repack-4build3/programs/cmd/batch.c:96] in cmd (0x00782700)
+  24 0x00419e5f WCMD_run_program+0xb7f(command=L"Z:\home\groophy\Desktop\gh\batch\bin\test-runner.bat darts Darts", called=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1210] in cmd (0x0078b0a4)
+  25 0x0041a6d3 WCMD_execute+0x783(command=L"Z:\home\groophy\Desktop\gh\batch\bin\test-runner.bat darts Darts", redirects=L"", cmdList=0078B374, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:1650] in cmd (0x0078b33c)
+  26 0x00419213 WCMD_process_commands+0x63(thisCmd=<is not available>, oneBracket=0, retrycall=0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2390] in cmd (0x0078b36c)
+  27 0x0041b945 WCMD_free_commands(argc=0x3, argvW=00358AE0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2691] in cmd (0x0078ff30)
+  28 0x0041b945 wmain+0xa05(argc=0x3, argvW=00358AE0) [/usr/src/wine-9.0~repack-4build3/programs/cmd/wcmdmain.c:2690] in cmd (0x0078ff30)
+  29 0x0041cb85 wmainCRTStartup+0x65() [/usr/src/wine-9.0~repack-4build3/dlls/msvcrt/crt_wmain.c:60] in cmd (0x0078ff50)
+  30 0x7bbb8b00 in kernel32 (+0x28b00) (0x0078ff68)
+  31 0x7bd644f3 in ntdll (+0x544f3) (0x0078ff80)
+  32 0x7bd659f5 in ntdll (+0x559f5) (0x0078ffec)
+0x7bd74356 wcslen+0x6 [/usr/src/wine-9.0~repack-4build3/dlls/ntdll/wcstring.c:218] in ntdll: cmpw $0x00, (%edx)
+Unable to access file '/usr/src/wine-9.0~repack-4build3/dlls/ntdll/wcstring.c'
+Modules:
+Module  Address                 Debug info      Name (30 modules)
+PE-Wine   400000-  58e000       Dwarf-4         cmd
+ELF     6368a000-6368f000       Deferred        <wine-loader>
+PE-Wine 798b0000-79913000       Deferred        imm32
+PE-Wine 79930000-79971000       Deferred        shcore
+PE-Wine 79990000-79a76000       Deferred        shlwapi
+PE-Wine 79a90000-79ac7000       Deferred        win32u
+PE-Wine 79ae0000-79b0a000       Deferred        zlib1
+PE-Wine 79b20000-79fe7000       Deferred        user32
+PE-Wine 7a000000-7a240000       Deferred        gdi32
+PE-Wine 7a250000-7a55f000       Deferred        ucrtbase
+PE-Wine 7a570000-7a5fb000       Deferred        sechost
+PE-Wine 7a610000-7a8a9000       Deferred        msvcrt
+PE-Wine 7a8c0000-7a9ac000       Deferred        advapi32
+PE-Wine 7a9c0000-7b63e000       Deferred        shell32
+PE-Wine 7b650000-7bb7b000       Dwarf-4         kernelbase
+PE-Wine 7bb90000-7bcf7000       Dwarf-4         kernel32
+PE-Wine 7bd10000-7bfee000       Dwarf-4         ntdll
+ELF     7f884000-7f8b0000       Deferred        libexpat.so.1
+ELF     7f8b0000-7f904000       Deferred        libfontconfig.so.1
+ELF     7f904000-7f927000       Deferred        libbrotlicommon.so.1
+ELF     7f927000-7f935000       Deferred        libbrotlidec.so.1
+ELF     7f935000-7f972000       Deferred        libpng16.so.16
+ELF     7f972000-7f984000       Deferred        libbz2.so.1.0
+ELF     7f984000-7f9a0000       Deferred        libz.so.1
+ELF     7f9a0000-7fa74000       Deferred        libfreetype.so.6
+ELF     7fa74000-7fb7e000       Deferred        libm.so.6
+ELF     7fb91000-7fd14000       Deferred        win32u.so
+ELF     ed373000-ed428000       Export          ntdll.so
+ELF     ed428000-ed664000       Deferred        libc.so.6
+ELF     ed67f000-ed6b4000       Deferred        ld-linux.so.2
+Threads:
+process  tid      prio    name (all IDs are in hex)
+00000038 services.exe
+	0000003c    0     
+	00000040    0     wine_rpcrt4_server
+	0000004c    0     wine_rpcrt4_io
+	00000078    0     wine_rpcrt4_io
+	000000b0    0     wine_rpcrt4_io
+	000000c8    0     wine_rpcrt4_io
+	000000dc    0     
+	000000e8    0     wine_rpcrt4_io
+00000044 winedevice.exe
+	00000048    0     
+	00000054    0     
+	00000058    0     wine_sechost_service
+	0000005c    0     
+	00000060    0     
+	00000064    0     
+	000000d4    0     
+	000000d8    0     
+00000068 explorer.exe
+	0000006c    0     
+	00000090    0     
+	0000009c    0     wine_rpcrt4_server
+00000070 winedevice.exe
+	00000074    0     
+	0000007c    0     
+	00000080    0     wine_sechost_service
+	00000084    0     
+	00000088    0     
+	0000008c    0     
+	000000a8    0     
+	000000ac    0     
+00000094 plugplay.exe
+	00000098    0     
+	000000b4    0     
+	000000b8    0     wine_sechost_service
+	000000bc    0     wine_rpcrt4_server
+000000c0 svchost.exe
+	000000c4    0     
+	000000cc    0     
+	000000d0    0     wine_sechost_service
+000000e0 rpcss.exe
+	000000e4    0     
+	000000ec    0     
+	000000f0    0     wine_sechost_service
+	000000f4    0     wine_rpcrt4_server
+	000000f8    0     wine_rpcrt4_server
+	000000fc    0     wine_rpcrt4_io
+000002b0 cmd.exe
+	000002b4    0     
+000003b0 start.exe
+	000003b4    0     
+000003b8 conhost.exe
+	000003bc    0     
+000003c0 (D) C:\windows\syswow64\cmd.exe
+	000003c4    0 <== 
+	000003d0    0     
+System information:
+    Wine build: wine-9.0 (Ubuntu 9.0~repack-4build3)
+    Platform: x86_64 (guest: i386)
+    Version: Windows 10
+    Host system: Linux
+    Host version: 6.8.0-39-generic
