@@ -61,9 +61,10 @@ set "stdout="
 REM Run the program and capture the output then delete the file
 set filePath=%slug%.bat
 if "%isTestRunner%"=="true" (
-    set filePath=.meta/Example.bat
+    set filePath=.meta\Example.bat
 )
-CALL %filePath% %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
+set batPath=%~dp0
+CALL %batPath%%filePath% %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
 set /p stdout=<stdout.bin
 del stdout.bin
 
