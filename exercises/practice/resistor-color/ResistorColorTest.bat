@@ -32,7 +32,8 @@ set "failCount=0"
     set "if_failed=Test failed: White"
     CALL :Assert "white"
 
-    set "expected=3"
+    REM 3 
+    set "expected=purposefully"
     set "if_success=Test passed"
     set "if_failed=Test failed: Orange"
     CALL :Assert "orange"

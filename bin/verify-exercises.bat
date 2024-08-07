@@ -3,6 +3,7 @@ setlocal EnableDelayedExpansion
 
 set configPath=%cd%\config.json
 echo %configPath%
+set isOneFailed=false
 
 for /f "usebackq tokens=*" %%a in ("%configPath%") do (
     set "line=%%a"
@@ -31,10 +32,19 @@ for /f "usebackq tokens=*" %%a in ("%configPath%") do (
         echo Name: !name!
         echo Exec: call \exercises\practice\!slug!\!name: =!Test.bat test-runner
         call %cd%\exercises\practice\!slug!\!name: =!Test.bat test-runner
+        set isFailed=!errorlevel!
+        echo isFailed: !isFailed!
+        if "!isFailed!" EQU "1" (
+            set isOneFailed=true
+        )
         echo.
         
     )
 )
 
-endlocal
+
+if "!isOneFailed!" EQU "true" (
+    echo One or more tests failed.
+    exit /b 1
+)
 exit /b 0
