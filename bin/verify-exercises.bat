@@ -1,7 +1,8 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-set configPath=../config.json
+set configPath=%cd%\config.json
+echo %configPath%
 
 for /f "usebackq tokens=*" %%a in ("%configPath%") do (
     set "line=%%a"
@@ -28,8 +29,8 @@ for /f "usebackq tokens=*" %%a in ("%configPath%") do (
 
         echo Slug: !slug!
         echo Name: !name!
-        echo Exec: call ../exercises/practice/!slug!/!name: =!Test.bat test-runner
-        call ../exercises/practice/!slug!/!name: =!Test.bat test-runner
+        echo Exec: call \exercises\practice\!slug!\!name: =!Test.bat test-runner
+        call %cd%\exercises\practice\!slug!\!name: =!Test.bat test-runner
         echo.
         
     )
