@@ -37,3 +37,4 @@ for /f "usebackq tokens=*" %%a in ("%configPath%") do (
 )
 
 endlocal
+exit /b 0
