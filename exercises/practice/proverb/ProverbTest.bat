@@ -34,22 +34,22 @@ set "failCount=0"
 
     set "expected=For want of a nail the shoe was lost.\nAnd all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: one pieces"
+    set "if_failed=Test failed: two pieces"
     CALL :Assert "nail shoe"
 
     set "expected=For want of a nail the shoe was lost.\nFor want of a shoe the horse was lost.\nAnd all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: one pieces"
+    set "if_failed=Test failed: three pieces"
     CALL :Assert "nail shoe horse"
 
     set "expected=For want of a nail the shoe was lost.\nFor want of a shoe the horse was lost.\nFor want of a horse the rider was lost.\nFor want of a rider the message was lost.\nFor want of a message the battle was lost.\nFor want of a battle the kingdom was lost.\nAnd all for the want of a nail."
     set "if_success=Test passed"
-    set "if_failed=Test failed: one pieces"
+    set "if_failed=Test failed: full proverb"
     CALL :Assert "nail shoe horse rider message battle kingdom"
 
     set "expected=For want of a pin the gun was lost.\nFor want of a gun the soldier was lost.\nFor want of a soldier the battle was lost.\nAnd all for the want of a pin."
     set "if_success=Test passed"
-    set "if_failed=Test failed: one pieces"
+    set "if_failed=Test failed: four pieces modernized"
     CALL :Assert "pin gun soldier battle"
 
     REM --------------------
@@ -73,7 +73,7 @@ if "%isTestRunner%"=="true" (
     set filePath=.meta\Example.bat
 )
 set batPath=%~dp0
-CALL %batPath%%filePath% %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
+CALL %batPath%%filePath% %1 %2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
 for /f "delims=" %%A in (stdout.bin) do (
     set "line=%%A"
     if defined stdout (
@@ -100,6 +100,8 @@ if "%stdout%" == "%expected%" (
 ) else (
     if defined if_failed (
         echo %if_failed%
+        echo Expected: %expected%
+        echo Actual: %stdout%
 
         REM Reset the variable to avoid duplicating the message.
         set "if_success="

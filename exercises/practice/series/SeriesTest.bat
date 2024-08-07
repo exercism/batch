@@ -68,10 +68,11 @@ if "%1" == "test-runner" (
     set "if_failed=Test failed: slice length cannot be negative."
     CALL :Assert "12345" "-1"
 
-    set "expected=series cannot be empty"
-    set "if_success=Test passed"
-    set "if_failed=Test failed: empty series is invalid."
-    CALL :Assert "" "1"
+    REM ------- Batch does not support empty string as a parameter -------
+    REM set "expected=series cannot be empty"
+    REM set "if_success=Test passed"
+    REM set "if_failed=Test failed: empty series is invalid."
+    REM CALL :Assert "" "1"
 
     REM --------------------
     REM Test Case End /\/\/\

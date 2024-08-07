@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 REM ---------------------------------------------------
-REM ResistorCode Unit Testing
+REM ResistorColor Unit Testing
 REM 
 REM sUnit Testing Framework version: 0.3
 REM ---------------------------------------------------
@@ -16,7 +16,7 @@ set "failCount=0"
 
 :Main
     REM Initalize result variable
-    set "slug=ResistorCode"
+    set "slug=ResistorColor"
 
     REM --------------------
     REM Test Case Start \/\/
