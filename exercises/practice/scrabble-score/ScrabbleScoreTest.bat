@@ -117,8 +117,6 @@ if "%stdout%" == "%expected%" (
 ) else (
     if defined if_failed (
         echo %if_failed%
-        echo Expected: %expected%
-        echo Actually: %stdout%
 
         REM Reset the variable to avoid duplicating the message.
         set "if_success="
