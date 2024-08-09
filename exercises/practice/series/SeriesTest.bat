@@ -3,6 +3,11 @@ REM ---------------------------------------------------
 REM Series Unit Testing
 REM ---------------------------------------------------
 
+set isTestRunner=false
+if "%1" == "test-runner" (
+    set isTestRunner=true
+)
+
 :Main
     REM Initalize result variable
     set "slug=Series"
@@ -63,10 +68,11 @@ REM ---------------------------------------------------
     set "if_failed=Test failed: slice length cannot be negative."
     CALL :Assert "12345" "-1"
 
-    set "expected=series cannot be empty"
-    set "if_success=Test passed"
-    set "if_failed=Test failed: empty series is invalid."
-    CALL :Assert "" "1"
+    REM ------- Batch does not support empty string as a parameter -------
+    REM set "expected=series cannot be empty"
+    REM set "if_success=Test passed"
+    REM set "if_failed=Test failed: empty series is invalid."
+    REM CALL :Assert "" "1"
 
     REM --------------------
     REM Test Case End /\/\/\
@@ -84,7 +90,12 @@ GOTO :End REM Prevents the code below from being executed
 set "stdout="
 
 REM Run the program and capture the output then delete the file
-CALL %slug%.bat %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
+set filePath=%slug%.bat
+if "%isTestRunner%"=="true" (
+    set filePath=.meta\Example.bat
+)
+set batPath=%~dp0
+CALL %batPath%%filePath% %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
 set /p stdout=<stdout.bin
 del stdout.bin
 
@@ -104,8 +115,6 @@ if "%stdout%" == "%expected%" (
 ) else (
     if defined if_failed (
         echo %if_failed%
-        echo Expected: %expected%
-        echo Actually: %stdout%
 
         REM Reset the variable to avoid duplicating the message.
         set "if_success="

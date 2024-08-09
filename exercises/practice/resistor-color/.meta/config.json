@@ -2,10 +2,10 @@
   "authors": ["GroophyLifefor"],
   "files": {
     "solution": [
-      "ResistorCode.bat"
+      "ResistorColor.bat"
     ],
     "test": [
-      "ResistorCodeTest.bat"
+      "ResistorColorTest.bat"
     ],
     "example": [
       ".meta/Example.bat"

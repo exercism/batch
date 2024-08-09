@@ -5,6 +5,11 @@ REM
 REM sUnit Testing Framework version: 0.2
 REM ---------------------------------------------------
 
+set isTestRunner=false
+if "%1" == "test-runner" (
+    set isTestRunner=true
+)
+
 :Main
     REM Initalize result variable
     set "slug=Hamming"
@@ -50,10 +55,11 @@ REM ---------------------------------------------------
     set "if_failed=Test failed: disallow second strand longer."
     CALL :Assert "ATA" "AGTG"
 
-    set "expected=left strand must not be empty"
-    set "if_success=Test passed"
-    set "if_failed=Test failed: disallow left empty strand."
-    CALL :Assert "" "G"
+    REM ------- Batch does not support empty string as a parameter. -------
+    REM set "expected=left strand must not be empty"
+    REM set "if_success=Test passed"
+    REM set "if_failed=Test failed: disallow left empty strand."
+    REM CALL :Assert "" "G"
 
     set "expected=right strand must not be empty"
     set "if_success=Test passed"
@@ -76,7 +82,12 @@ GOTO :End REM Prevents the code below from being executed
 set "stdout="
 
 REM Run the program and capture the output then delete the file
-CALL %slug%.bat %1 %2 %3 %4 %5 %6 %7 %8 %9 > stdout.bin 2>&1
+set filePath=%slug%.bat
+if "%isTestRunner%"=="true" (
+    set filePath=.meta\Example.bat
+)
+set batPath=%~dp0
+CALL %batPath%%filePath% %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
 set /p stdout=<stdout.bin
 del stdout.bin
 

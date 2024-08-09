@@ -1,17 +1,22 @@
 @echo off
 setlocal enabledelayedexpansion
 REM ---------------------------------------------------
-REM ResistorCode Unit Testing
+REM ResistorColor Unit Testing
 REM 
 REM sUnit Testing Framework version: 0.3
 REM ---------------------------------------------------
+
+set isTestRunner=false
+if "%1" == "test-runner" (
+    set isTestRunner=true
+)
 
 set "successCount=0"
 set "failCount=0"
 
 :Main
     REM Initalize result variable
-    set "slug=ResistorCode"
+    set "slug=ResistorColor"
 
     REM --------------------
     REM Test Case Start \/\/
@@ -53,7 +58,12 @@ GOTO :End REM Prevents the code below from being executed
 set "stdout="
 
 REM Run the program and capture the output then delete the file
-CALL %slug%.bat %1 %2 %3 %4 %5 %6 %7 %8 %9 > stdout.bin 2>&1
+set filePath=%slug%.bat
+if "%isTestRunner%"=="true" (
+    set filePath=.meta\Example.bat
+)
+set batPath=%~dp0
+CALL %batPath%%filePath% %~1 %~2 %~3 %~4 %~5 %~6 %~7 %~8 %~9 > stdout.bin 2>&1
 for /f "delims=" %%A in (stdout.bin) do (
     set "line=%%A"
     if defined stdout (

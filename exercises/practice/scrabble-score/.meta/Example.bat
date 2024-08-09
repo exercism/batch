@@ -1,44 +1,61 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "hours=%~1"
-set "minutes=%~2"
+set "word=%~1"
+set "result="
 
-set /a minutesDivisor=60
-set /a HoursDivisor=24
-
-if %minutes% LSS 0 (
-	set minutes=%minutes:~1%
-	set /a quotient=!minutes! / minutesDivisor
-	set /a modulo=!minutes! %% minutesDivisor
-	set /a hours-=quotient+1
-    if !modulo! EQU 0 (
-        set "modulo=!minutesDivisor!"
-        set /a hours+=1
-    ) 
-	set /a "minutes=minutesDivisor - !modulo!"
-) else (
-	set /a quotient=minutes / minutesDivisor
-	set /a modulo=minutes %% minutesDivisor
-	set /a hours+=quotient
-	set "minutes=!modulo!"
+if not defined word (
+    echo 0
+    exit /b
 )
 
-if %hours% LSS 0 (
-	set hours=%hours:~1%
-	set /a hoursModulo=hours %% HoursDivisor
-	set /a "hours=HoursDivisor - hoursModulo"
-) else (
-	set /a hoursModulo=hours %% HoursDivisor
-	set "hours=!hoursModulo!"
-)
+call :toLowerCase word
 
-if !minutes! lss 10 (
-    set minutes=0%minutes%
-)
+set "one_point=a e i o u l n r s t"
+set "two_point=d g"
+set "three_point=b c m p"
+set "four_point=f h v w y"
+set "five_point=k"
+set "eight_point=j x"
+set "ten_point=q z"
 
-if !hours! lss 10 (
-    set hours=0%hours%
-)
+for %%a in (%one_point%) do set word=!word:%%a=1+!
+for %%a in (%two_point%) do set word=!word:%%a=2+!
+for %%a in (%three_point%) do set word=!word:%%a=3+!
+for %%a in (%four_point%) do set word=!word:%%a=4+!
+for %%a in (%five_point%) do set word=!word:%%a=5+!
+for %%a in (%eight_point%) do set word=!word:%%a=8+!
+for %%a in (%ten_point%) do set word=!word:%%a=10+!
+set word=%word%0
+set /a result=%word%
+echo %result%
+GOTO :EOF
 
-echo %hours%:%minutes%
+:toLowerCase
+SET %~1=!%~1:A=a!
+SET %~1=!%~1:B=b!
+SET %~1=!%~1:C=c!
+SET %~1=!%~1:D=d!
+SET %~1=!%~1:E=e!
+SET %~1=!%~1:F=f!
+SET %~1=!%~1:G=g!
+SET %~1=!%~1:H=h!
+SET %~1=!%~1:I=i!
+SET %~1=!%~1:J=j!
+SET %~1=!%~1:K=k!
+SET %~1=!%~1:L=l!
+SET %~1=!%~1:M=m!
+SET %~1=!%~1:N=n!
+SET %~1=!%~1:O=o!
+SET %~1=!%~1:P=p!
+SET %~1=!%~1:Q=q!
+SET %~1=!%~1:R=r!
+SET %~1=!%~1:S=s!
+SET %~1=!%~1:T=t!
+SET %~1=!%~1:U=u!
+SET %~1=!%~1:V=v!
+SET %~1=!%~1:W=w!
+SET %~1=!%~1:X=x!
+SET %~1=!%~1:Y=y!
+SET %~1=!%~1:Z=z!
+GOTO :EOF

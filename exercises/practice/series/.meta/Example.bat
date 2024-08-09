@@ -38,7 +38,6 @@ echo !result:~1!
 exit /b
 
 :getLength
-setlocal EnableDelayedExpansion
 set "s=#%~1"
 set "len=0"
 for %%N in (4096 2048 1024 512 256 128 64 32 16 8 4 2 1) do (
@@ -47,5 +46,5 @@ for %%N in (4096 2048 1024 512 256 128 64 32 16 8 4 2 1) do (
 		set "s=!s:~%%N!"
 	)
 )
-endlocal&if "%~2" neq "" (set %~2=%len%) else echo %len%
+if "%~2" neq "" (set %~2=%len%) else echo %len%
 exit /b
