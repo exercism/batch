@@ -12,7 +12,8 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 4
+    "indent_size": 2,
+    "highlightjs_language": "bat"
   },
   "files": {
     "solution": [],
@@ -215,13 +216,7 @@
         "name": "Food Chain",
         "uuid": "c6654779-1e5d-47ba-940a-4d96261513cd",
         "practices": [],
-        "prerequisites": [
-          "basics",
-          "dicts",
-          "lists",
-          "loops",
-          "strings"
-        ],
+        "prerequisites": ["basics", "dicts", "lists", "loops", "strings"],
         "difficulty": 4
       },
       {
@@ -235,7 +230,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Easy to Learn",
+      "content": "Batch scripting is simple and accessible for beginners.",
+      "icon": "easy"
+    },
+    {
+      "title": "Widely Compatible",
+      "content": "Batch scripts run on any Windows system without modification.",
+      "icon": "portable"
+    },
+    {
+      "title": "User Interaction",
+      "content": "Batch scripts can prompt for and handle user input dynamically.",
+      "icon": "interactive"
+    },
+    {
+      "title": "Flexible Use",
+      "content": "Batch scripting handles a variety of automation tasks effectively.",
+      "icon": "general-purpose"
+    },
+    {
+      "title": "Command Power",
+      "content": "Automate and manage tasks efficiently with Batch scripting.",
+      "icon": "powerful"
+    },
+    {
+      "title": "Stable Performance",
+      "content": "Batch scripts run reliably for consistent task automation.",
+      "icon": "stable"
+    }
+  ],
   "tags": [
     "platform/windows",
     "used_for/scripts",
