@@ -1,1 +1,10 @@
-TODO: add snippet
+@echo off
+setlocal enabledelayedexpansion
+
+set /p backupDir=Enter backup directory: 
+if not exist "!backupDir!" mkdir "!backupDir!"
+for %%f in (*.txt) do (
+    set timestamp=!date:~-4,4!!date:~-10,2!!date:~-7,2!_!time:~0,2!!time:~3,2!
+    copy "%%f" "!backupDir!\%%~nf_!timestamp!%%~xf"
+)
+echo Backup complete

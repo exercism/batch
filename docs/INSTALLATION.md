@@ -1,15 +1,83 @@
 # Installation
 
-<!-- TODO: write document
+## Windows (Recommended)
 
-  This document should describe what the student needs to install
-  to allow working on the track on their local system using the CLI.
+Are you using a Windows operating system?
 
-  You can include the installation instructions in this document, but
-  usually it is better to link to a resource with the official installation
-  instructions, to prevent the instructions from becoming outdated.
+Press `Windows Key`, type `cmd`, and press `enter`.
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/installation`.
+> Batch is already installed on your system if your operating system is Windows.
 
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+If you are using a different operating system, you can install Batch by following the instructions below.
+
+## Mac OS
+
+1. Gatekeeper must not be set to block unsigned packages.
+2. Open the Terminal application.
+3. Run the following command to install Batch:
+
+```bash
+brew install --cask --no-quarantine wine-stable
+```
+
+## Ubuntu
+
+1. If your system is 64 bit, enable 32 bit architecture (if you haven't already):
+
+```bash
+sudo dpkg --add-architecture i386 
+```
+
+2. Add the WineHQ repository:
+
+```bash
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo apt update
+```
+
+3. Install WineHQ:
+
+```bash
+sudo apt install --install-recommends winehq-stable
+```
+
+## Debian
+
+1. If your system is 64 bit, enable 32 bit architecture (if you haven't already):
+
+```bash
+sudo dpkg --add-architecture i386 
+```
+
+2. Add the WineHQ repository:
+
+```bash
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo apt update
+```
+
+3. Install WineHQ:
+
+```bash
+sudo apt install --install-recommends winehq-stable
+```
+
+## Fedora
+
+1. Enable the Wine repository:
+
+```bash
+# Fedore 39
+dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/39/winehq.repo
+
+# Fedora 40
+dnf config-manager --add-repo https://dl.winehq.org/wine-builds/fedora/40/winehq.repo
+```
+
+2. Install WineHQ:
+
+```bash
+dnf install winehq-stable
+```
