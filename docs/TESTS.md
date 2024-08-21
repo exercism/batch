@@ -1,15 +1,15 @@
 # Tests
 
-<!-- TODO: write document
+## Running Tests
 
-  This document should describe everything related to running tests in the track.
+To run the tests, execute the following command:
 
-  If your track uses skipped tests, this document can explain why thet is used and
-  how to unskip tests.
+```bash
+call {slug}Test.bat
+```
 
-  This document can also link to the testing framework documentation.
+## Solving the exercise
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/tests`.
+Solving an exercise means making all its tests pass. When all tests have been pass, you'll have solved the exercise!
 
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
+To help you get started, each exercise comes with a stub implementation file. You can use this file as a starting point for building your solution. Feel free to remove or change this file if you think it is the right thing to do.
