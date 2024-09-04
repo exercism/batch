@@ -1,5 +1,7 @@
 {
-  "authors": ["GroophyLifefor"],
+  "authors": [
+    "GroophyLifefor"
+  ],
   "files": {
     "solution": [
       "Proverb.bat"
