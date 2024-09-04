@@ -1,5 +1,7 @@
 {
-  "authors": ["GroophyLifefor"],
+  "authors": [
+    "GroophyLifefor"
+  ],
   "files": {
     "solution": [
       "ResistorColor.bat"
@@ -12,5 +14,6 @@
     ]
   },
   "blurb": "Convert a resistor band's color to its numeric representation.",
-  "source": "Maud de Vries, Erik Schierboom"
+  "source": "Maud de Vries, Erik Schierboom",
+  "source_url": "https://github.com/exercism/problem-specifications/issues/1458"
 }

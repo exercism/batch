@@ -1,5 +1,7 @@
 {
-  "authors": ["GroophyLifefor"],
+  "authors": [
+    "GroophyLifefor"
+  ],
   "files": {
     "solution": [
       "Clock.bat"
@@ -12,5 +14,5 @@
     ]
   },
   "blurb": "Implement a clock that handles times without dates.",
-  "source": "Pairing session with Erin Drummond."
+  "source": "Pairing session with Erin Drummond"
 }
