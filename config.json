@@ -35,7 +35,7 @@
       {
         "uuid": "9287b1e2-253b-4a05-bce0-1361b186459e",
         "slug": "raindrops",
-        "name": "raindrops",
+        "name": "Raindrops",
         "practices": ["basics", "conditionals"],
         "prerequisites": [],
         "difficulty": 1
