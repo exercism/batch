@@ -16,9 +16,15 @@
     "highlightjs_language": "bat"
   },
   "files": {
-    "solution": [],
-    "test": [],
-    "example": [],
+    "solution": [
+      "%{pascal_slug}.bat"
+    ],
+    "test": [
+      "%{pascal_slug}Test.bat"
+    ],
+    "example": [
+      ".meta/Example.bat"
+    ],
     "exemplar": []
   },
   "exercises": {
