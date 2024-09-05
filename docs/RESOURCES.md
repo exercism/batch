@@ -6,7 +6,7 @@
 
 ## Social media
 
-- [StackOverflow ](https://stackoverflow.com/questions/tagged/batch-file) can be used to search for your problem and see if it has been answered already. You can also ask and answer questions.
+- [StackOverflow](https://stackoverflow.com/questions/tagged/batch-file) can be used to search for your problem and see if it has been answered already. You can also ask and answer questions.
 - [/r/Batch](https://www.reddit.com/r/Batch/) is the Batch subreddit.
 
 ## Videos
