@@ -1,5 +1,8 @@
 {
-  "authors": ["GroophyLifefor", "Antoni Gual"],
+  "authors": [
+    "GroophyLifefor",
+    "Antoni Gual"
+  ],
   "files": {
     "solution": [
       "Sieve.bat"

@@ -1,5 +1,8 @@
 {
-  "authors": ["dbenham", "GroophyLifefor"],
+  "authors": [
+    "dbenham",
+    "GroophyLifefor"
+  ],
   "files": {
     "solution": [
       "NthPrime.bat"
