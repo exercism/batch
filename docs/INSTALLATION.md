@@ -25,7 +25,7 @@ brew install --cask --no-quarantine wine-stable
 1. If your system is 64 bit, enable 32 bit architecture (if you haven't already):
 
 ```bash
-sudo dpkg --add-architecture i386 
+sudo dpkg --add-architecture i386
 ```
 
 2. Add the WineHQ repository:
@@ -47,7 +47,7 @@ sudo apt install --install-recommends winehq-stable
 1. If your system is 64 bit, enable 32 bit architecture (if you haven't already):
 
 ```bash
-sudo dpkg --add-architecture i386 
+sudo dpkg --add-architecture i386
 ```
 
 2. Add the WineHQ repository:
