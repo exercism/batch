@@ -73,9 +73,6 @@ if "%1" == "test-runner" (
     set "if_failed=Test failed: entire alphabet available."
     CALL :Assert "abcdefghijklmnopqrstuvwxyz"
 
-    REM TODO: as Future - ADD OTHER TEST CASES LIKE ADD VALUE TEST CASE
-    REM https://github.com/exercism/problem-specifications/blob/8b6a412a949d9080b08869156067a16521c4d1ba/exercises/clock/canonical-data.json#L216
-
     REM --------------------
     REM Test Case End /\/\/\
     REM --------------------
