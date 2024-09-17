@@ -9,5 +9,14 @@
 # As user-added comments (using the # character) will be removed when this file
 # is regenerated, comments can be added via a `comment` key.
 
-[af9ffe10-dc13-42d8-a742-e7bdafac449d]
-description = "Say Hi!"
+[75c65189-8aef-471a-81de-0a90c728160c]
+description = "first prime"
+
+[2c38804c-295f-4701-b728-56dea34fd1a0]
+description = "second prime"
+
+[56692534-781e-4e8c-b1f9-3e82c1640259]
+description = "sixth prime"
+
+[bd0a9eae-6df7-485b-a144-80e13c7d55b2]
+description = "there is no zeroth prime"
