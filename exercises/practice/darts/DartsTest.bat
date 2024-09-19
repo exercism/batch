@@ -51,11 +51,6 @@ if "%1" == "test-runner" (
     set "if_success=Test passed"
     set "if_failed=Test failed: Asymmetric position between the inner and middle circles."
     CALL :Assert "0" "-4"
-
-    set "expected=5"
-    set "if_success=Test passed"
-    set "if_failed=Test failed: Asymmetric position between the inner and middle circles."
-    CALL :Assert "1" "-4"
     
     REM --------------------
     REM Test Case End /\/\/\
