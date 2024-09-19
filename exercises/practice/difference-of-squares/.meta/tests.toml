@@ -9,5 +9,11 @@
 # As user-added comments (using the # character) will be removed when this file
 # is regenerated, comments can be added via a `comment` key.
 
-[af9ffe10-dc13-42d8-a742-e7bdafac449d]
-description = "Say Hi!"
+[44f72ae6-31a7-437f-858d-2c0837adabb6]
+description = "Subtract sum of squares from square of sums -> difference of squares 1"
+
+[005cb2bf-a0c8-46f3-ae25-924029f8b00b]
+description = "Subtract sum of squares from square of sums -> difference of squares 5"
+
+[b1bf19de-9a16-41c0-a62b-1f02ecc0b036]
+description = "Subtract sum of squares from square of sums -> difference of squares 100"
