@@ -42,12 +42,12 @@ if "%1" == "test-runner" (
 
     set "expected=487"
     set "if_success=Test passed"
-    set "if_failed=Test failed: 50th prime"
+    set "if_failed=Test failed: 93rd prime"
     CALL :Assert "93"
 
     set "expected=there is no zeroth prime"
     set "if_success=Test passed"
-    set "if_failed=Test failed: 50th prime"
+    set "if_failed=Test failed: there is no zeroth prime"
     CALL :Assert "0"
 
     REM --------------------
