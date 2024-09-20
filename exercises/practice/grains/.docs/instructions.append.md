@@ -1,3 +1,4 @@
 # Independent of other languages
 
-Batch supports only up to 31 bits so we need to use a different approach to solve, Instead of writing code according to the range 1 to 64, the range `1 to 31` is important for us.
+However, the king ran out of grains to give the servant after day 31 since 1,073,741,824 grains is approximately 54 metric tons. 
+As a 32-bit language, Batch can't represent the number of grains past this point.
