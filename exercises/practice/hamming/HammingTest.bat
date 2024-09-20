@@ -54,17 +54,6 @@ if "%1" == "test-runner" (
     set "if_success=Test passed"
     set "if_failed=Test failed: disallow second strand longer."
     CALL :Assert "ATA" "AGTG"
-
-    REM ------- Batch does not support empty string as a parameter. -------
-    REM set "expected=left strand must not be empty"
-    REM set "if_success=Test passed"
-    REM set "if_failed=Test failed: disallow left empty strand."
-    REM CALL :Assert "" "G"
-
-    set "expected=right strand must not be empty"
-    set "if_success=Test passed"
-    set "if_failed=Test failed: disallow right empty strand."
-    CALL :Assert "G" ""
     
     REM --------------------
     REM Test Case End /\/\/\
