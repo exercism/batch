@@ -49,19 +49,19 @@ if "%1" == "test-runner" (
     set "if_failed=Test failed: grains on square 31."
     CALL :Assert "31"
 
-    set "expected=square must be between 1 and 64"
+    set "expected=square must be between 1 and 31"
     set "if_success=Test passed"
     set "if_failed=Test failed: square 0 is invalid."
     CALL :Assert "0"
 
-    set "expected=square must be between 1 and 64"
+    set "expected=square must be between 1 and 31"
     set "if_success=Test passed"
     set "if_failed=Test failed: negative square is invalid."
     CALL :Assert "-1"
 
-    set "expected=square must be between 1 and 64"
+    set "expected=square must be between 1 and 31"
     set "if_success=Test passed"
-    set "if_failed=Test failed: square greater than 64 is invalid."
+    set "if_failed=Test failed: square greater than 31 is invalid."
     CALL :Assert "65"
 
     REM --------------------

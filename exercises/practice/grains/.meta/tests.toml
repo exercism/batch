@@ -26,10 +26,13 @@ description = "returns the number of grains on the square -> grains on square 16
 
 [acd81b46-c2ad-4951-b848-80d15ed5a04f]
 description = "returns the number of grains on the square -> grains on square 32"
+include = false
+comment = "Batch is 32-bit so square 31 is maximum possible"
 
 [c73b470a-5efb-4d53-9ac6-c5f6487f227b]
 description = "returns the number of grains on the square -> grains on square 64"
 include = false
+comment = "Batch is 32-bit so square 31 is maximum possible"
 
 [1d47d832-3e85-4974-9466-5bd35af484e3]
 description = "returns the number of grains on the square -> square 0 is invalid"
@@ -39,6 +42,8 @@ description = "returns the number of grains on the square -> negative square is 
 
 [a95e4374-f32c-45a7-a10d-ffec475c012f]
 description = "returns the number of grains on the square -> square greater than 64 is invalid"
+include = false
+comment = "Batch is 32-bit so the test description, input, and expected value all were changed"
 
 [6eb07385-3659-4b45-a6be-9dc474222750]
 description = "returns the total number of grains on the board"
