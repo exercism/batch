@@ -39,6 +39,14 @@
         "difficulty": 1
       },
       {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "9d73247b-7844-4111-9703-4afd78a4218e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "9287b1e2-253b-4a05-bce0-1361b186459e",
