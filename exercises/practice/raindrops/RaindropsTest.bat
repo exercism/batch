@@ -99,11 +99,10 @@ if "%1" == "test-runner" (
     set "if_failed=the sound for 52 is 52."
     CALL :Assert 52
 
-    REM TODO: fix the test case
-    REM set "expected=PlingPlangPlong"
-    REM set "if_success=Test passed"
-    REM set "if_failed=the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7."
-    REM CALL :Assert 105
+    set "expected=PlingPlangPlong"
+    set "if_success=Test passed"
+    set "if_failed=the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7."
+    CALL :Assert 105
 
     set "expected=Plang"
     set "if_success=Test passed"
