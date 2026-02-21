@@ -52,6 +52,7 @@ REM ---------------------------------------------------
 GOTO :End REM Prevents the code below from being executed
 :Assert
 set "stdout="
+set "filePath=%slug%.bat"
 
 REM Run the program and capture the output then delete the file
 if "%isTestRunner%"=="true" (
