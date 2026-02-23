@@ -41,7 +41,7 @@
       {
         "slug": "pangram",
         "name": "Pangram",
-        "uuid": "",
+        "uuid": "11ae0c33-931c-4f3b-80dc-b393589049c0",
         "practices": [
           "loops",
           "strings"
