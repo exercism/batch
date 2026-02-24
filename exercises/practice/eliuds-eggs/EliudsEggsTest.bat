@@ -35,7 +35,7 @@ set "failCount=0"
 
     set "expected=4"
     set "if_success=Test passed"
-    set "if_failed=Test failed: 4 eggs"
+    set "if_failed=Test failed: 4 eggs."
     CALL :Assert "89"
 
     set "expected=13"
