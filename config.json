@@ -115,6 +115,19 @@
         "difficulty": 1
       },
       {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "0875c5f0-8336-494b-b32a-b9d789d32ea7",
+        "practices": [
+          "basics",
+          "bitwise-operations",
+          "loops",
+          "numbers"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "darts",
         "name": "Darts",
         "uuid": "cb581e2c-66ab-4221-9884-44bacb7c4ebe",
