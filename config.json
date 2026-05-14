@@ -39,6 +39,17 @@
         "difficulty": 1
       },
       {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "11ae0c33-931c-4f3b-80dc-b393589049c0",
+        "practices": [
+          "loops",
+          "strings"
+        ],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "9d73247b-7844-4111-9703-4afd78a4218e",
