@@ -1,0 +1,14 @@
+:most_common_word
+setlocal enabledelayedexpansion
+set "best="
+set "best_count=0"
+for %%w in (%~1) do (
+    set /a "count_%%w+=1"
+    if !count_%%w! gtr !best_count! (
+        set "best=%%w"
+        set /a "best_count=count_%%w"
+    )
+)
+echo "%best%" appears %best_count% times
+endlocal
+exit /b
